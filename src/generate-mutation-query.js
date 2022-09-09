@@ -27,6 +27,8 @@ const generateMutationQuery = (data, projectName, columnName, contentId, action)
 			return matchingColumns.length > 0;
 		});
 
+	console.log(JSON.stringify(data, null, 2));
+
 	// There are no locations for the card to move to
 	if (endLocation.length === 0) {
 		throw new Error(`Could not find the column "${columnName}" or project "${projectName}"`);
